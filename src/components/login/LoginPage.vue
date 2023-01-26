@@ -15,7 +15,7 @@
     <Button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Sign in</Button>
  
     <div class="p-4">
-    <RouterLink class="text-dark text-decoration-none cursor:pointer" :to="{ name: 'register' }">© Sign up?
+    <RouterLink class="text-dark text-decoration-none cursor:pointer" :to="{ name: 'register' }">© don't have an account?
       </RouterLink>
     </div>
   </form>
