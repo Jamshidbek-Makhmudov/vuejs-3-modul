@@ -1,13 +1,22 @@
 <template >
-  <div>
-    this is login page
+  <div class="box text-center ">
+    <LoginPage />
   </div>
 </template>
 <script>
+import { LoginPage } from '@/components'
 export default {
-  name:"Login"
+  components: {
+    LoginPage,
+  }
 }
 </script>
-<style >
-  
+<style scoped >
+.box {
+
+  border: none;
+  border-radius: 8px;
+  background: -webkit-linear-gradient(left, #7f049e, #f09f34);
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
+}
 </style>
