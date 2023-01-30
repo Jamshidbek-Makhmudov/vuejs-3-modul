@@ -5,6 +5,7 @@ import uiComponents from "./components/ui-components"
 import "./index.css"
 import store from "./store"
 const app = createApp(App)
+
 uiComponents.map((component) => app.component(component.name, component))
 
 app.use(router)

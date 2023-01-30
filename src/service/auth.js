@@ -1,8 +1,9 @@
 import axios from "./axios"
+
 const AuthServise = {
     register(user) {
-        return axios.post("/users", { user: user }) //bu yerda 1ta user yozib qoysak ham boladi.
+        return axios.post("/users", { user })
     },
-    login(user) {},
 }
+
 export default AuthServise

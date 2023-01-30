@@ -10,10 +10,11 @@
         />
       </a>
       <h1 class="h3 mb-3 fw-normal mt-3">Please sign up</h1>
-  <ValidationError :validationError="validationError"/>
-      <Input :label="'Name'" :type="'text'" />
-      <Input :label="'Email address'" :type="'text'" />
-      <Input :label="'Password'" :type="'password'" />
+
+			<ValidationError v-if="validationErrors" :validationErrors="validationErrors" />
+      <Input :label="'Name'" :type="'text'" v-model="username" />
+			<Input :label="'Email address'" :type="'email'" v-model="email" />
+			<Input :label="'Password'" :type="'password'" v-model="password" />
       <Button
         class="w-100 btn btn-lg btn-primary mt-3"
         type="submit"
@@ -48,9 +49,9 @@ export default {
     isLoading() {
       return this.$store.state.auth.isLoading
     },
-    validationError() {
-      return this.$store.state.auth.error
-    }
+    validationErrors() {
+      return this.$store.state.auth.errors
+    },
   },
   methods: {
     submitHandler(e) {
